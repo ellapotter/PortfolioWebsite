@@ -1,0 +1,14 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+file:///private/var/folders/zx/_3qymx3s6vl_2glr5dd41dbw0000gn/T/cursor-sandbox-cache/ebc49714edaa7bccbdd23676f9d2adec/npm/_npx/94e6c7d88b079398/node_modules/png-to-ico/index.js:6
+const err = new Error("Please give me a square PNG image.");
+            ^
+
+Error: Please give me a square PNG image.
+    at file:///private/var/folders/zx/_3qymx3s6vl_2glr5dd41dbw0000gn/T/cursor-sandbox-cache/ebc49714edaa7bccbdd23676f9d2adec/npm/_npx/94e6c7d88b079398/node_modules/png-to-ico/index.js:6:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:639:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  code: 'ESIZE'
+}
+
+Node.js v25.9.0

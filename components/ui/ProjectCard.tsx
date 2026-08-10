@@ -1,0 +1,121 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+import { SiGithub } from "react-icons/si";
+import type { Project } from "@/data/projects";
+import { getProjectCategoryLabel } from "@/data/projects";
+
+type ProjectCardProps = {
+  project: Project;
+  index: number;
+};
+
+export function ProjectCard({ project, index }: ProjectCardProps) {
+  const number = String(index + 1).padStart(2, "0");
+  const categoryLabel = getProjectCategoryLabel(project.category);
+  const caseLink = project.caseUrl ?? project.demo ?? project.github ?? "#";
+  const isExternalCaseLink = caseLink.startsWith("http");
+
+  return (
+    <article
+      className={`group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:-translate-y-1 hover:shadow-lg lg:rounded-3xl ${
+        project.featured
+          ? "border-2 border-pink-300 shadow-pink-200 hover:border-pink-400 hover:shadow-pink-300"
+          : "border border-pink-200 shadow-pink-100 hover:border-pink-300 hover:shadow-pink-200"
+      }`}
+    >
+      <div className="relative aspect-[16/10] overflow-hidden bg-pink-100 lg:aspect-[5/3]">
+        <Image
+          src={project.image}
+          alt={`${project.title} preview`}
+          fill
+          className={`${project.imageFit === "contain" ? "object-contain p-6" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+        />
+
+        <span className="absolute left-4 top-4 rounded-full border border-pink-200/80 bg-white/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-pink-700 backdrop-blur-sm">
+          • {categoryLabel}
+        </span>
+        {project.featured && (
+          <span className="absolute right-4 top-4 rounded-full bg-pink-500 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm shadow-pink-300">
+            Featured Project
+          </span>
+        )}
+      </div>
+
+      <div className="relative flex flex-1 flex-col p-6 lg:p-8">
+        <span
+          className="pointer-events-none absolute bottom-4 right-4 select-none font-mono text-7xl font-bold leading-none text-pink-100 lg:text-8xl"
+          aria-hidden="true"
+        >
+          {number}
+        </span>
+
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-pink-400 lg:text-xs">
+          —— CASE • {categoryLabel}
+        </p>
+
+        <h3 className="relative z-10 mb-3 text-xl font-bold tracking-tight text-pink-950 lg:text-2xl">
+          {project.title}
+        </h3>
+
+        <p className="relative z-10 mb-6 flex-1 text-sm leading-relaxed text-pink-800 lg:text-base">
+          {project.description}
+        </p>
+
+        {project.technologies && (
+          <ul className="relative z-10 mb-6 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>
+            {project.technologies.map((technology) => (
+              <li
+                key={technology}
+                className="rounded-full border border-pink-200 bg-pink-50 px-2.5 py-1 font-mono text-[10px] font-semibold text-pink-700 lg:text-xs"
+              >
+                {technology}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div className="relative z-10 flex items-center justify-between gap-4 border-t border-pink-100 pt-4">
+          <Link
+            href={caseLink}
+            {...(isExternalCaseLink && {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            })}
+            className="rounded-sm font-mono text-xs font-semibold uppercase tracking-wider text-pink-600 transition-colors hover:text-pink-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
+          >
+            View Project →
+          </Link>
+
+          <div className="flex items-center gap-2">
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${project.title} live demo`}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-pink-200 bg-pink-50 text-pink-600 transition-colors hover:border-pink-300 hover:bg-pink-100 hover:text-pink-500"
+              >
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${project.title} GitHub repository`}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-pink-200 bg-pink-50 text-pink-600 transition-colors hover:border-pink-300 hover:bg-pink-100 hover:text-pink-500"
+              >
+                <SiGithub className="h-4 w-4" />
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}

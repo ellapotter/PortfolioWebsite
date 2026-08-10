@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ede9fe"/>
+  <rect x="100" y="70" width="180" height="360" rx="12" fill="#fff"/>
+  <rect x="310" y="70" width="390" height="360" rx="12" fill="#fff"/>
+  <rect x="130" y="110" width="120" height="12" rx="6" fill="#c4b5fd"/>
+  <rect x="130" y="140" width="90" height="8" rx="4" fill="#ddd6fe"/>
+  <rect x="340" y="110" width="200" height="16" rx="8" fill="#a78bfa"/>
+  <rect x="340" y="150" width="320" height="10" rx="5" fill="#e9d5ff"/>
+  <text x="400" y="470" text-anchor="middle" fill="#6d28d9" font-family="system-ui,sans-serif" font-size="20" font-weight="600">Portfolio CMS</text>
+</svg>

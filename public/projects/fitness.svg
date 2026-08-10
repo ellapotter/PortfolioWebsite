@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#fce7f3"/>
+  <rect x="290" y="40" width="220" height="420" rx="32" fill="#fff" stroke="#f9a8d4" stroke-width="4"/>
+  <rect x="320" y="90" width="160" height="200" rx="12" fill="#fbcfe8"/>
+  <circle cx="400" cy="360" r="28" fill="#ec4899"/>
+  <text x="400" y="470" text-anchor="middle" fill="#9d174d" font-family="system-ui,sans-serif" font-size="20" font-weight="600">PulseFit Tracker</text>
+</svg>
