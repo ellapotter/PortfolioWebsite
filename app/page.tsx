@@ -2,7 +2,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
-import { ExperienceBanner } from "@/components/sections/ExperienceBanner";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
@@ -14,7 +13,6 @@ export default function Home() {
       <main className="bg-pink-50">
         <Hero />
         <About />
-        <ExperienceBanner />
         <Projects />
         <Skills />
         <Contact />

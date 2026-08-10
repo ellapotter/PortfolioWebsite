@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { FileText, Mail } from "lucide-react";
 import Link from "next/link";
-import { contact } from "@/data/portfolio";
-import { sectionContainer } from "@/components/ui/sectionLayout";
+import { usePathname } from "next/navigation";
 
 const sectionLinks = [
   { id: "home", label: "Home" },
@@ -17,10 +15,17 @@ const sectionLinks = [
 
 export function Navbar() {
   const prefersReducedMotion = useReducedMotion();
+  const pathname = usePathname();
+  const isProjectPage = pathname.startsWith("/projects/");
   const [activeSection, setActiveSection] = useState("home");
+  const displayedActiveSection = isProjectPage ? "projects" : activeSection;
   const Nav = prefersReducedMotion ? "nav" : motion.nav;
 
   useEffect(() => {
+    if (isProjectPage) {
+      return;
+    }
+
     const sections = sectionLinks
       .map(({ id }) => document.getElementById(id))
       .filter((section): section is HTMLElement => Boolean(section))
@@ -62,7 +67,7 @@ export function Navbar() {
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
     };
-  }, []);
+  }, [isProjectPage]);
 
   return (
     <Nav
@@ -74,7 +79,7 @@ export function Navbar() {
       className="fixed top-0 z-50 w-full border-b border-pink-200 bg-pink-50/95 text-pink-950 shadow-sm shadow-pink-200/60 backdrop-blur-md"
     >
       <div
-        className={`grid min-h-28 grid-cols-[auto_1fr] items-center gap-x-4 px-4 py-3 sm:px-6 md:flex md:min-h-[4.75rem] md:gap-2 md:py-0 lg:gap-5 lg:px-12 ${sectionContainer}`}
+        className="relative grid min-h-28 w-full grid-cols-[auto_1fr] items-center gap-x-4 px-4 py-3 sm:px-6 md:flex md:min-h-[4.75rem] md:py-0 lg:px-8"
       >
         <Link
           href="/#home"
@@ -84,29 +89,10 @@ export function Navbar() {
           EP<span className="text-fuchsia-400">.</span>
         </Link>
 
-        <div className="ml-auto flex shrink-0 items-center gap-2 md:order-3 lg:gap-3">
-          <a
-            href={contact.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full border border-pink-200 bg-white px-3 py-2 text-xs font-semibold text-pink-800 shadow-sm transition-colors hover:border-pink-400 hover:bg-pink-100 hover:text-pink-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500 sm:text-sm lg:px-4"
-          >
-            <FileText className="h-4 w-4" aria-hidden="true" />
-            Resume
-          </a>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-rose-400 px-3 py-2 text-xs font-semibold text-white shadow-md shadow-pink-200 transition-transform hover:scale-[1.03] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500 sm:text-sm lg:px-4"
-          >
-            <Mail className="h-4 w-4" aria-hidden="true" />
-            Contact
-          </Link>
-        </div>
-
-        <div className="col-span-2 -mx-1 mt-2 overflow-x-auto md:order-2 md:mx-auto md:mt-0 md:overflow-visible">
+        <div className="col-span-2 -mx-1 mt-2 overflow-x-auto md:ml-auto md:mr-0 md:mt-0 md:overflow-visible">
           <div className="flex min-w-max items-center gap-1 px-1 sm:justify-center lg:gap-2">
             {sectionLinks.map(({ id, label }) => {
-              const isActive = activeSection === id;
+              const isActive = displayedActiveSection === id;
 
               return (
                 <Link

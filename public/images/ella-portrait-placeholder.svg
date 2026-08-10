@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title description">
+  <title id="title">Ella Potter portrait placeholder</title>
+  <desc id="description">Abstract blush and plum composition with Ella Potter's initials</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7fb"/>
+      <stop offset="1" stop-color="#fce7f3"/>
+    </linearGradient>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M 52 0 L 0 0 0 52" fill="none" stroke="#f9a8d4" stroke-opacity=".28" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" rx="72" fill="url(#background)"/>
+  <rect width="800" height="1000" rx="72" fill="url(#grid)"/>
+  <circle cx="645" cy="185" r="190" fill="#f9a8d4" fill-opacity=".38"/>
+  <circle cx="115" cy="825" r="230" fill="#e879f9" fill-opacity=".16"/>
+  <path d="M128 226C255 78 502 89 659 272c-79 30-118 91-128 183-132-42-264-10-388 87-52-107-57-212-15-316Z" fill="#fbcfe8"/>
+  <rect x="185" y="258" width="430" height="484" rx="215" fill="#fff" fill-opacity=".78" stroke="#f9a8d4" stroke-width="4"/>
+  <text x="400" y="535" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="178" font-weight="700" fill="#4c1530">EP</text>
+  <circle cx="554" cy="506" r="18" fill="#db2777"/>
+  <text x="400" y="814" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" letter-spacing="6" fill="#8b5870">PORTRAIT COMING SOON</text>
+</svg>

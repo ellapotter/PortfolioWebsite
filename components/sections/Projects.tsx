@@ -46,11 +46,12 @@ export function Projects() {
                 <button
                   key={filter.id}
                   type="button"
+                  aria-pressed={isActive}
                   onClick={() => setActiveFilter(filter.id)}
                   className={`rounded-full px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-wider transition-all sm:px-5 sm:text-xs lg:px-6 lg:py-2.5 lg:text-sm ${
                     isActive
-                      ? "bg-pink-500 text-white shadow-md shadow-pink-200"
-                      : "text-pink-700 hover:bg-pink-50 hover:text-pink-600"
+                      ? "bg-pink-600 text-white shadow-md shadow-pink-200"
+                      : "text-plum-700 hover:bg-pink-50 hover:text-pink-700"
                   }`}
                 >
                   {filter.label}
@@ -60,7 +61,7 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3 2xl:gap-10">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project, index) => (
             <AnimatedDiv
               key={project.id}

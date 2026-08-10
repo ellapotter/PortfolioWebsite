@@ -4,12 +4,18 @@ export const site = {
   role: "Computer Science & Engineering Student",
   typewriterSequences: [
     "Engineer. Problem Solver. Critical Thinker. Designer.",
-    "Coder. Java. Python. C++. Flutter. SQL.",
+    "Coder. Java. Python. C++. Dart. SQL. Ruby.",
+    "Leader. Creator. Builder. Learner.",
   ],
 };
 
 export const about = {
   heading: "About Me",
+  portrait: {
+    src: "/images/ella-portrait.jpg",
+    fallbackSrc: "/images/ella-portrait-placeholder.svg",
+    alt: "Portrait of Ella Potter — image coming soon.",
+  },
   bio: "I’m a Computer Science & Engineering student at the University of Iowa who enjoys building software that solves real problems. My experience includes mobile app development, databases, embedded systems, robotics, and full-stack projects. I like working on projects that combine creativity with technical problem-solving, whether I’m building an app, debugging hardware, or helping students learn how to code.",
   education: [
     {
@@ -29,6 +35,7 @@ export type SkillIcon =
   | "rubyonrails"
   | "mysql"
   | "html5"
+  | "dart"
   | "arduino"
   | "git"
   | "docker";
@@ -57,7 +64,7 @@ export const experience = {
   period: "Summer 2025",
   highlights: [
     "Led coding and robotics lessons for students ages 6–15",
-    "Taught beginner-friendly programming concepts using Python, Arduino, robotics, and game-based projects",
+    "Taught beginner-friendly programming concepts using Python, Java, and Unity/C#",
     "Helped students debug code, solve problems, and build confidence with technology",
   ],
 };

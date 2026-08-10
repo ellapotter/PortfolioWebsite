@@ -15,6 +15,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Edit [`data/portfolio.ts`](data/portfolio.ts) to update your name, projects, experience, and contact links.
 
+### Portrait image
+
+Add Ella's final portrait at `public/images/ella-portrait.jpg`. The About section will use that file automatically and gracefully fall back to `public/images/ella-portrait-placeholder.svg` until it is available. No layout changes are required.
+
 ## Deploy to Vercel
 
 1. Push this repo to GitHub
