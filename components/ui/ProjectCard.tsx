@@ -29,9 +29,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="relative aspect-[16/10] overflow-hidden bg-pink-100 lg:aspect-[5/3]">
         <Image
           src={project.cardImage ?? project.image}
-          alt={project.imageAlt ?? `${project.title} preview`}
+          alt={project.cardImageAlt ?? project.imageAlt ?? `${project.title} preview`}
           fill
-          className={`${project.imageFit === "contain" ? "object-contain p-6" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+          className={`${(project.cardImageFit ?? project.imageFit) === "contain" ? "object-contain p-6" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
         />
 

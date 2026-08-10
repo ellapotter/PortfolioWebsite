@@ -26,11 +26,9 @@ export type SkillIcon =
   | "python"
   | "cplusplus"
   | "flutter"
-  | "react"
-  | "nextjs"
-  | "typescript"
-  | "nodejs"
-  | "postgresql"
+  | "rubyonrails"
+  | "mysql"
+  | "html5"
   | "arduino"
   | "git"
   | "docker";
@@ -45,11 +43,9 @@ export const skills: Skill[] = [
   { name: "Python", icon: "python" },
   { name: "C++", icon: "cplusplus" },
   { name: "Flutter", icon: "flutter" },
-  { name: "TypeScript", icon: "typescript" },
-  { name: "React", icon: "react" },
-  { name: "Next.js", icon: "nextjs" },
-  { name: "Node.js", icon: "nodejs" },
-  { name: "PostgreSQL", icon: "postgresql" },
+  { name: "Ruby on Rails", icon: "rubyonrails" },
+  { name: "MySQL", icon: "mysql" },
+  { name: "HTML", icon: "html5" },
   { name: "Arduino", icon: "arduino" },
   { name: "Git", icon: "git" },
   { name: "Docker", icon: "docker" },
@@ -79,7 +75,7 @@ export const contact = {
   subheading: "Open to software engineering internships, project collaborations, and opportunities to solve interesting problems.",
   email: "ellapotter80@gmail.com",
   github: "https://github.com/ellapotter",
-  linkedin: "https://linkedin.com/in/ellapotter",
+  linkedin: "https://www.linkedin.com/in/ella-potter-7384632a8/",
   resume: "/resume.pdf",
 };
 

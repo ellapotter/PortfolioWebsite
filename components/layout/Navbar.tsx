@@ -12,7 +12,7 @@ const sectionLinks = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
-  { id: "contact", label: "Contact" },
+  { id: "contact", label: "Links" },
 ] as const;
 
 export function Navbar() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { FileText, Code2, Link2, Mail } from "lucide-react";
+import { FileText, Code2, Link2 } from "lucide-react";
 import { contact } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import {
@@ -15,7 +15,6 @@ import {
 const socialLinks = [
   { href: contact.github, label: "GitHub", icon: Code2 },
   { href: contact.linkedin, label: "LinkedIn", icon: Link2 },
-  { href: `mailto:${contact.email}`, label: "Email", icon: Mail },
   { href: contact.resume, label: "Resume", icon: FileText },
 ];
 
@@ -34,14 +33,12 @@ export function Contact() {
         <div className="mb-8 flex flex-wrap justify-center gap-4 lg:mb-10 lg:gap-5">
           {socialLinks.map(({ href, label, icon: Icon }) => {
             const Link = prefersReducedMotion ? "a" : motion.a;
-            const isEmail = label === "Email";
-
             return (
               <Link
                 key={label}
                 href={href}
-                target={isEmail ? undefined : "_blank"}
-                rel={isEmail ? undefined : "noopener noreferrer"}
+                target="_blank"
+                rel="noopener noreferrer"
                 {...(!prefersReducedMotion && {
                   whileHover: { scale: 1.05 },
                   whileTap: { scale: 0.98 },

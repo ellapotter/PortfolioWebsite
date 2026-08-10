@@ -14,6 +14,8 @@ export type Project = {
   category: ProjectCategory;
   image: string;
   cardImage?: string;
+  cardImageAlt?: string;
+  cardImageFit?: "cover" | "contain";
   imageAlt?: string;
   imageFit?: "cover" | "contain";
   github?: string;
@@ -50,6 +52,9 @@ export const projects: Project[] = [
       "Completed senior-design prototype that gives riders more control through preference-aware driver recommendations and swipe-based selection, with Flutter rider and driver apps, a Flask admin portal, and shared Python/MySQL services.",
     category: "app",
     image: "/projects/RideMatchLogo.png",
+    cardImage: "/projects/covers/ridematch-cover.png",
+    cardImageAlt: "RideMatch mobile app with route and ride-preference icons",
+    cardImageFit: "cover",
     imageFit: "contain",
     github: "https://github.com/RideMatch-SeniorDesign/ridematch",
     caseUrl: "/projects/ridematch",
@@ -63,6 +68,9 @@ export const projects: Project[] = [
       "A role-based election management prototype supporting voter registration, user verification, precinct-based ballots, election administration, voting workflows, and controlled result publication.",
     category: "web",
     image: "/projects/election-system/election-welcome.png",
+    cardImage: "/projects/covers/election-management-cover.png",
+    cardImageAlt: "Election management system with a secure ballot box and regional results",
+    cardImageFit: "cover",
     imageAlt: "Election Management System public welcome page",
     imageFit: "cover",
     caseUrl: "/projects/election-system",
@@ -79,7 +87,9 @@ export const projects: Project[] = [
       "A series of ATmega328P hardware and software projects culminating in a digital compass with sensor communication, an LCD interface, directional LEDs, push-button controls, and mixed-voltage circuitry.",
     category: "embedded",
     image: "/projects/embedded-systems/img_4694.jpg",
-    cardImage: "/projects/embedded-systems/IMG_4374.jpg",
+    cardImage: "/projects/covers/embedded-systems-cover.png",
+    cardImageAlt: "Embedded digital compass circuit on a breadboard",
+    cardImageFit: "cover",
     caseUrl: "/projects/embedded-systems",
     technologies: [
       "ATmega328P",
@@ -100,6 +110,9 @@ export const projects: Project[] = [
       "A full-stack library management application with patron and staff dashboards, catalog and checkout workflows, room reservations, account management, and a relational MySQL database.",
     category: "web",
     image: "/projects/library-database/staff-dashboard.png",
+    cardImage: "/projects/covers/library-database-cover.png",
+    cardImageAlt: "Library database connecting books, patrons, reservations, and catalog records",
+    cardImageFit: "cover",
     imageFit: "cover",
     github: "https://github.com/ellapotter/LibraryDatabase",
     caseUrl: "/projects/library-database",
@@ -113,6 +126,9 @@ export const projects: Project[] = [
       "A SaaS-style Ruby on Rails application that helps users organize recipients, plan gift-giving events, track budgets, manage gift ideas, and generate personalized suggestions with AI.",
     category: "web",
     image: "/projects/giftwise/giftwise-icon.svg",
+    cardImage: "/projects/covers/giftwise-cover.png",
+    cardImageAlt: "GiftWise planning tools surrounding an open gift box",
+    cardImageFit: "cover",
     imageAlt: "GiftWise gift-box logo representing the gift-planning application",
     imageFit: "contain",
     github: "https://github.com/hjmjohnsonSELT2025/giftwiseproject-selt_2025_team_02",
