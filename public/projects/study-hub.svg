@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#ede9fe"/>
-  <rect x="80" y="80" width="640" height="340" rx="20" fill="#fff"/>
-  <rect x="120" y="130" width="200" height="140" rx="12" fill="#ddd6fe"/>
-  <rect x="360" y="130" width="320" height="20" rx="10" fill="#c4b5fd"/>
-  <rect x="360" y="170" width="280" height="12" rx="6" fill="#e9d5ff"/>
-  <rect x="360" y="200" width="300" height="12" rx="6" fill="#e9d5ff"/>
-  <text x="400" y="460" text-anchor="middle" fill="#6d28d9" font-family="system-ui,sans-serif" font-size="20" font-weight="600">Study Group Hub</text>
-</svg>

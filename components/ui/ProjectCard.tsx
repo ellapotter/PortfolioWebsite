@@ -15,8 +15,8 @@ type ProjectCardProps = {
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const number = String(index + 1).padStart(2, "0");
   const categoryLabel = getProjectCategoryLabel(project.category);
-  const caseLink = project.caseUrl ?? project.demo ?? project.github ?? "#";
-  const isExternalCaseLink = caseLink.startsWith("http");
+  const caseLink = project.caseUrl && project.caseUrl !== "#" ? project.caseUrl : null;
+  const isExternalCaseLink = caseLink?.startsWith("http") ?? false;
 
   return (
     <article
@@ -28,8 +28,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-pink-100 lg:aspect-[5/3]">
         <Image
-          src={project.image}
-          alt={`${project.title} preview`}
+          src={project.cardImage ?? project.image}
+          alt={project.imageAlt ?? `${project.title} preview`}
           fill
           className={`${project.imageFit === "contain" ? "object-contain p-6" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
@@ -54,7 +54,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </span>
 
         <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-pink-400 lg:text-xs">
-          —— CASE • {categoryLabel}
+          —— {categoryLabel}
         </p>
 
         <h3 className="relative z-10 mb-3 text-xl font-bold tracking-tight text-pink-950 lg:text-2xl">
@@ -79,16 +79,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         )}
 
         <div className="relative z-10 flex items-center justify-between gap-4 border-t border-pink-100 pt-4">
-          <Link
-            href={caseLink}
-            {...(isExternalCaseLink && {
-              target: "_blank",
-              rel: "noopener noreferrer",
-            })}
-            className="rounded-sm font-mono text-xs font-semibold uppercase tracking-wider text-pink-600 transition-colors hover:text-pink-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
-          >
-            View Project →
-          </Link>
+          {caseLink ? (
+            <Link
+              href={caseLink}
+              {...(isExternalCaseLink && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
+              className="rounded-sm font-mono text-xs font-semibold uppercase tracking-wider text-pink-600 transition-colors hover:text-pink-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
+            >
+              View Project →
+            </Link>
+          ) : (
+            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-pink-400">
+              Coming soon
+            </span>
+          )}
 
           <div className="flex items-center gap-2">
             {project.demo && (
@@ -102,7 +108,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <ExternalLink className="h-4 w-4" />
               </a>
             )}
-            {project.github && (
+            {project.github && project.githubStatus !== "coming-soon" && (
               <a
                 href={project.github}
                 target="_blank"

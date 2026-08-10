@@ -12,7 +12,7 @@ const sectionLinks = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
-  { id: "contact", label: "Links" },
+  { id: "contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
@@ -32,6 +32,18 @@ export function Navbar() {
     const updateActiveSection = () => {
       window.cancelAnimationFrame(frame);
       frame = window.requestAnimationFrame(() => {
+        const pageBottom = window.scrollY + window.innerHeight;
+        const isAtPageBottom = pageBottom >= document.documentElement.scrollHeight - 2;
+        const finalSection = sections.at(-1);
+        const hasReachedFinalSection = Boolean(
+          finalSection && finalSection.getBoundingClientRect().top <= window.innerHeight * 0.7,
+        );
+
+        if (isAtPageBottom || hasReachedFinalSection) {
+          setActiveSection(finalSection?.id ?? sections[0].id);
+          return;
+        }
+
         const marker = window.innerHeight * 0.35;
         const current = sections.reduce((active, section) => {
           return section.getBoundingClientRect().top <= marker ? section : active;
@@ -108,7 +120,7 @@ export function Navbar() {
                   {isActive && (
                     <motion.span
                       layoutId="active-section-dot"
-                      className="absolute left-1 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-fuchsia-500 shadow-sm shadow-fuchsia-300"
+                      className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-fuchsia-500 shadow-sm shadow-fuchsia-300"
                       transition={prefersReducedMotion ? { duration: 0 } : { type: "spring", stiffness: 420, damping: 32 }}
                       aria-hidden="true"
                     />

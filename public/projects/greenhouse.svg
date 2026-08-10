@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#ecfdf5"/>
-  <rect x="120" y="120" width="200" height="260" rx="16" fill="#fff" stroke="#6ee7b7" stroke-width="3"/>
-  <rect x="360" y="120" width="320" height="80" rx="12" fill="#d1fae5"/>
-  <path d="M160 200h120M160 240h90M160 280h110" stroke="#34d399" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="620" cy="300" r="50" fill="#10b981" opacity="0.3"/>
-  <text x="400" y="460" text-anchor="middle" fill="#047857" font-family="system-ui,sans-serif" font-size="20" font-weight="600">Smart Greenhouse</text>
-</svg>

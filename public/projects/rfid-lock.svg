@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#ecfdf5"/>
-  <rect x="280" y="160" width="240" height="200" rx="16" fill="#fff" stroke="#34d399" stroke-width="4"/>
-  <rect x="340" y="210" width="120" height="80" rx="8" fill="#d1fae5"/>
-  <circle cx="400" cy="250" r="24" fill="#10b981" opacity="0.5"/>
-  <rect x="200" y="300" width="400" height="12" rx="6" fill="#6ee7b7"/>
-  <text x="400" y="460" text-anchor="middle" fill="#047857" font-family="system-ui,sans-serif" font-size="20" font-weight="600">RFID Access System</text>
-</svg>
