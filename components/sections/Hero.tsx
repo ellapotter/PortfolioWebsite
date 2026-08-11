@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown, FileText, Gamepad2, Sparkles } from "lucide-react";
+import Link from "next/link";
 import { site } from "@/data/portfolio";
 import { TypewriterSkills } from "@/components/ui/TypewriterSkills";
 import {
@@ -59,6 +60,24 @@ export function Hero() {
             prefersReducedMotion ? site.typewriterSequences[0] : undefined
           }
         />
+      </div>
+      <div className="mb-16 flex flex-wrap items-center justify-center gap-3">
+        <Link
+          href="/game"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-pink-300 bg-white px-5 py-2.5 text-sm font-semibold text-pink-700 shadow-md shadow-pink-200/70 transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 lg:text-base"
+        >
+          <Gamepad2 className="h-4 w-4" aria-hidden="true" />
+          Play Game
+        </Link>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-pink-300 bg-white px-5 py-2.5 text-sm font-semibold text-pink-700 shadow-md shadow-pink-200/70 transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 lg:text-base"
+        >
+          <FileText className="h-4 w-4" aria-hidden="true" />
+          View Resume
+        </a>
       </div>
       <a
         href="#experience"

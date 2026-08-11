@@ -4,6 +4,7 @@ import type { ComponentType } from "react";
 import {
   SiArduino,
   SiCplusplus,
+  SiDart,
   SiDocker,
   SiFlutter,
   SiGit,
@@ -32,6 +33,7 @@ const iconMap: Record<SkillIcon, ComponentType<{ className?: string }>> = {
   rubyonrails: SiRubyonrails,
   mysql: SiMysql,
   html5: SiHtml5,
+  dart: SiDart,
   arduino: SiArduino,
   git: SiGit,
   docker: SiDocker,

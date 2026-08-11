@@ -12,9 +12,9 @@ export const site = {
 export const about = {
   heading: "About Me",
   portrait: {
-    src: "/images/ella-portrait.jpg",
+    src: "/ProfilePicture.jpg",
     fallbackSrc: "/images/ella-portrait-placeholder.svg",
-    alt: "Portrait of Ella Potter — image coming soon.",
+    alt: "Portrait of Ella Potter.",
   },
   bio: "I’m a Computer Science & Engineering student at the University of Iowa who enjoys building software that solves real problems. My experience includes mobile app development, databases, embedded systems, robotics, and full-stack projects. I like working on projects that combine creativity with technical problem-solving, whether I’m building an app, debugging hardware, or helping students learn how to code.",
   education: [

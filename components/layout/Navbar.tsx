@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -17,12 +18,13 @@ export function Navbar() {
   const prefersReducedMotion = useReducedMotion();
   const pathname = usePathname();
   const isProjectPage = pathname.startsWith("/projects/");
+  const isGamePage = pathname === "/game";
   const [activeSection, setActiveSection] = useState("home");
   const displayedActiveSection = isProjectPage ? "projects" : activeSection;
   const Nav = prefersReducedMotion ? "nav" : motion.nav;
 
   useEffect(() => {
-    if (isProjectPage) {
+    if (isProjectPage || isGamePage) {
       return;
     }
 
@@ -67,7 +69,11 @@ export function Navbar() {
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
     };
-  }, [isProjectPage]);
+  }, [isProjectPage, isGamePage]);
+
+  if (isGamePage) {
+    return null;
+  }
 
   return (
     <Nav
@@ -82,11 +88,18 @@ export function Navbar() {
         className="relative grid min-h-28 w-full grid-cols-[auto_1fr] items-center gap-x-4 px-4 py-3 sm:px-6 md:flex md:min-h-[4.75rem] md:py-0 lg:px-8"
       >
         <Link
-          href="/#home"
-          aria-label="Ella Potter — home"
-          className="shrink-0 font-mono text-2xl font-bold tracking-tight text-pink-950 transition-colors hover:text-pink-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500 lg:text-3xl"
+          href="/#about"
+          aria-label="Ella Potter — about me"
+          className="shrink-0 rounded-full transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
         >
-          EP<span className="text-fuchsia-400">.</span>
+          <Image
+            src="/WebIcon.png"
+            alt=""
+            width={56}
+            height={56}
+            priority
+            className="h-11 w-11 lg:h-13 lg:w-13"
+          />
         </Link>
 
         <div className="col-span-2 -mx-1 mt-2 overflow-x-auto md:ml-auto md:mr-0 md:mt-0 md:overflow-visible">
@@ -115,6 +128,12 @@ export function Navbar() {
                 </Link>
               );
             })}
+            <Link
+              href="/game"
+              className="ml-1 rounded-full border border-pink-300 bg-white px-3 py-2 text-sm font-semibold text-pink-700 shadow-sm shadow-pink-200/70 transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 lg:px-4 xl:text-base"
+            >
+              Play Game
+            </Link>
           </div>
         </div>
       </div>
