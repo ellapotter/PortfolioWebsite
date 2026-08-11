@@ -16,7 +16,7 @@ export const about = {
     fallbackSrc: "/images/ella-portrait-placeholder.svg",
     alt: "Portrait of Ella Potter.",
   },
-  bio: "I’m a Computer Science & Engineering student at the University of Iowa who enjoys building software that solves real problems. My experience includes mobile app development, databases, embedded systems, robotics, and full-stack projects. I like working on projects that combine creativity with technical problem-solving, whether I’m building an app, debugging hardware, or helping students learn how to code.",
+  bio: "I’m a Computer Science & Engineering student at the University of Iowa planning to graduate in December 2026. My experience includes mobile app development, web development, databases, embedded systems, robotics, and full-stack projects. I like working on projects that combine creativity with technical problem-solving, whether I’m building an app, debugging hardware, or helping others learn how to code.",
   education: [
     {
       school: "University of Iowa",
@@ -60,11 +60,11 @@ export const skills: Skill[] = [
 
 export const experience = {
   title: "Lead Coding & Robotics Instructor",
-  organization: "Summer Tech Camp",
+  organization: "iCode",
   period: "Summer 2025",
   highlights: [
-    "Led coding and robotics lessons for students ages 6–15",
-    "Taught beginner-friendly programming concepts using Python, Java, and Unity/C#",
+    "Led coding, robotics, and gaming lessons for students ages 6–15",
+    "Taught beginner-friendly programming concepts using Python, Java, and C#",
     "Helped students debug code, solve problems, and build confidence with technology",
   ],
 };
@@ -79,7 +79,7 @@ export { projects, projectsSection, projectFilters, getProjectCategoryLabel } fr
 
 export const contact = {
   heading: "Let's build something together",
-  subheading: "Open to software engineering internships, project collaborations, and opportunities to solve interesting problems.",
+  subheading: "Open to software engineering, project collaborations, and opportunities to solve interesting problems.",
   email: "ellapotter80@gmail.com",
   github: "https://github.com/ellapotter",
   linkedin: "https://www.linkedin.com/in/ella-potter-7384632a8/",

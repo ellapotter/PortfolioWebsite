@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowDown,
   ArrowLeft,
   ArrowRight,
   Check,
-  Database,
   ExternalLink,
   Gift,
   ServerCog,
@@ -30,7 +28,7 @@ function Checks({ items, columns = true }: { items: string[]; columns?: boolean 
 
 export function GiftWiseProjectDetail({ project, caseStudy }: Props) {
   const c = caseStudy;
-  if (!c.overview || !c.contributions || !c.userFlow || !c.personalization || !c.giftPlanning || !c.aiIntegration || !c.productOffers || !c.learning || !c.saasDesign || !c.architecture || !c.testing || !c.reflection || !c.technologies || !c.skillsSection) return null;
+  if (!c.overview || !c.contributions || !c.userFlow || !c.personalization || !c.giftPlanning || !c.aiIntegration || !c.productOffers || !c.learning || !c.saasDesign || !c.testing || !c.reflection || !c.technologies || !c.skillsSection) return null;
 
   return <main className="bg-pink-50 pt-28 text-pink-950 md:pt-[4.75rem]"><article>
     <header className={`grid-bg relative overflow-hidden ${sectionPadding}`}>
@@ -42,7 +40,7 @@ export function GiftWiseProjectDetail({ project, caseStudy }: Props) {
             <div className="mt-6 flex flex-wrap gap-2">{project.technologies?.map((tech) => <TechBadge key={tech} label={tech} />)}</div>
             <div className="mt-8 flex flex-wrap items-center gap-4"><span className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-4 py-2 text-sm font-medium text-pink-800"><span className="h-2 w-2 rounded-full bg-pink-500" />{c.status}</span><a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-pink-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-600"><SiGithub /> View Code on GitHub <ExternalLink className="h-3.5 w-3.5" /></a></div>
           </div>
-          <figure className="overflow-hidden rounded-3xl border border-pink-200 bg-white p-3 shadow-xl shadow-pink-200/60"><div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-pink-100"><Image src={project.image} alt="GiftWise gift-box logo representing the gift-planning application" fill priority className="object-contain" sizes="(max-width: 1024px) 100vw, 45vw" /></div><figcaption className="px-2 pb-1 pt-3 text-center font-mono text-xs text-pink-600">GiftWise project artwork</figcaption></figure>
+          <figure className="overflow-hidden rounded-3xl border border-pink-200 bg-white p-3 shadow-xl shadow-pink-200/60"><div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-pink-100"><Image src={project.image} alt="GiftWise gift-box logo representing the gift-planning application" fill priority className="object-contain" sizes="(max-width: 1024px) 100vw, 45vw" /></div><figcaption className="px-2 pb-1 pt-3 text-center font-mono text-xs text-pink-600">GiftWise project</figcaption></figure>
         </div>
       </div>
     </header>
@@ -65,15 +63,15 @@ export function GiftWiseProjectDetail({ project, caseStudy }: Props) {
 
     <section className={`bg-white ${sectionPadding}`}><div className={sectionContainer}><Heading label="SaaS concepts" title={c.saasDesign.heading} /><p className="mb-7 max-w-3xl text-pink-800">{c.saasDesign.intro}</p><div className={card}><Checks items={c.saasDesign.features ?? []} /></div><p className="mt-5 text-sm leading-relaxed text-pink-700">This is a SaaS-style course project; the repository does not confirm a currently operated public service.</p></div></section>
 
-    <section className={`grid-bg ${sectionPadding}`}><div className={sectionContainer}><Heading label="Architecture" title={c.architecture.heading} /><div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-center"><div className={card} role="img" aria-label="User interacts with Rails controllers and views, which connect to Active Record models and the application database, plus OpenAI, Google OAuth, and SerpAPI services"><div className="mx-auto max-w-xl text-center"><div className="mx-auto w-fit rounded-xl border border-pink-200 bg-pink-50 px-5 py-3 font-semibold"><UserRound className="mr-2 inline h-5 w-5 text-pink-500" />User</div><ArrowDown className="mx-auto my-3 h-5 w-5 text-pink-400" /><div className="rounded-xl bg-pink-500 px-5 py-4 font-bold text-white">Rails Controllers &amp; Views</div><ArrowDown className="mx-auto my-3 h-5 w-5 text-pink-400" /><div className="rounded-xl border border-pink-300 bg-pink-100 px-5 py-4 font-bold">Active Record Models</div><ArrowDown className="mx-auto my-3 h-5 w-5 text-pink-400" /><div className="mx-auto w-fit rounded-xl bg-pink-950 px-5 py-3 font-semibold text-white"><Database className="mr-2 inline h-5 w-5" />Application Database</div><div className="mt-5 grid gap-2 sm:grid-cols-3">{["OpenAI API", "Google OAuth", "SerpAPI Search"].map(x => <div key={x} className="rounded-xl border border-dashed border-pink-300 bg-white p-3 text-sm font-semibold">{x}</div>)}</div></div></div><p className="leading-relaxed text-pink-800">{c.architecture.description}</p></div></div></section>
 
-    <section className={`bg-white ${sectionPadding}`}><div className={sectionContainer}><Heading label="Testing" title={c.testing.heading} /><div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]"><div className={card}><Checks items={c.testing.tools ?? []} /></div><div><ServerCog className="mb-4 h-8 w-8 text-pink-500" /><p className="text-lg leading-relaxed text-pink-800">{c.testing.description}</p><p className="mt-4 text-sm text-pink-700">No coverage percentage is shown because it was not recalculated for this case study.</p></div></div></div></section>
 
-    <section className={`bg-rose-50/60 ${sectionPadding}`}><div className={sectionContainer}><Heading label="Reflection" title={c.reflection.heading} /><div className="grid gap-5 lg:grid-cols-3">{c.reflection.cards?.map(item => <div key={item.title} className={card}><h3 className="mb-3 text-xl font-bold">{item.title}</h3><p className="text-sm leading-relaxed text-pink-800">{item.description}</p></div>)}</div><p className="mt-8 max-w-4xl text-lg leading-relaxed text-pink-800">{c.reflection.conclusion}</p></div></section>
+    <section className={`bg-rose-50/60 ${sectionPadding}`}><div className={sectionContainer}><Heading label="Testing" title={c.testing.heading} /><div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]"><div className={card}><Checks items={c.testing.tools ?? []} /></div><div><ServerCog className="mb-4 h-8 w-8 text-pink-500" /><p className="text-lg leading-relaxed text-pink-800">{c.testing.description}</p><p className="mt-4 text-sm text-pink-700"></p></div></div></div></section>
 
-    <section className={`bg-white ${sectionPadding}`}><div className={sectionContainer}><Heading label="Technology stack" title="Tools Behind GiftWise" /><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{c.technologies.map(item => <div key={item.name} className={card}><h3 className="font-bold">{item.name}</h3><p className="mt-2 text-sm leading-relaxed text-pink-800">{item.description}</p></div>)}</div></div></section>
+    <section className={`bg-white ${sectionPadding}`}><div className={sectionContainer}><Heading label="Reflection" title={c.reflection.heading} /><div className="grid gap-5 lg:grid-cols-3">{c.reflection.cards?.map(item => <div key={item.title} className={card}><h3 className="mb-3 text-xl font-bold">{item.title}</h3><p className="text-sm leading-relaxed text-pink-800">{item.description}</p></div>)}</div><p className="mt-8 max-w-4xl text-lg leading-relaxed text-pink-800">{c.reflection.conclusion}</p></div></section>
 
-    <section className={`bg-rose-50/60 ${sectionPadding}`}><div className={sectionContainer}><Heading label="Skills" title={c.skillsSection.heading} /><ul className="flex flex-wrap gap-3">{c.skillsSection.items.map(item => <li key={item}><TechBadge label={item} /></li>)}</ul></div></section>
+    <section className={`bg-rose-50/60 ${sectionPadding}`}><div className={sectionContainer}><Heading label="Technology stack" title="Tools Behind GiftWise" /><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{c.technologies.map(item => <div key={item.name} className={card}><h3 className="font-bold">{item.name}</h3><p className="mt-2 text-sm leading-relaxed text-pink-800">{item.description}</p></div>)}</div></div></section>
+
+    <section className={`bg-white ${sectionPadding}`}><div className={sectionContainer}><Heading label="Skills" title={c.skillsSection.heading} /><ul className="flex flex-wrap gap-3">{c.skillsSection.items.map(item => <li key={item}><TechBadge label={item} /></li>)}</ul></div></section>
 
     <section className="bg-pink-950 py-14 text-white lg:py-16"><div className={`${sectionContainer} flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between`}><div><p className="font-mono text-xs uppercase tracking-widest text-pink-300">Explore GiftWise</p><h2 className="mt-2 text-2xl font-bold lg:text-3xl">See the collaborative Rails project</h2></div><div className="flex flex-wrap gap-3"><a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-5 py-3 text-sm font-semibold hover:bg-pink-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"><SiGithub /> View Code on GitHub</a><Link href="/#projects" className="inline-flex items-center gap-2 rounded-full border border-pink-300 px-5 py-3 text-sm font-semibold hover:bg-pink-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"><ArrowLeft className="h-4 w-4" /> Back to Projects</Link></div></div></section>
   </article></main>;

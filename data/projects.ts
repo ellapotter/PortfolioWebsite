@@ -2,7 +2,7 @@ export const projectsSection = {
   label: "Projects",
   title: "Projects I've worked on",
   description:
-    "From full-stack mobile apps to voting websites, processor design, and embedded hardware — here's a sample of what I've built.",
+    "From full-stack websites, mobile apps, and embedded hardware — here's a sample of what I've built.",
 };
 
 export type ProjectCategory = "app" | "web" | "embedded" | "systems";
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     id: "ridematch",
     title: "RideMatch",
     description:
-      "Completed senior-design prototype that gives riders more control through preference-aware driver recommendations and swipe-based selection, with Flutter rider and driver apps, a Flask admin portal, and shared Python/MySQL services.",
+      "A completed senior-design prototype that gives riders more control through preference-based driver recommendations and swipe-based selection, now being refined through user feedback ahead of deployment.",
     category: "app",
     image: "/projects/RideMatchLogo.png",
     cardImage: "/projects/covers/ridematch-cover-v2.png",
@@ -60,25 +60,6 @@ export const projects: Project[] = [
     caseUrl: "/projects/ridematch",
     technologies: ["Flutter", "Dart", "Python", "Flask", "MySQL", "Stripe"],
     featured: true,
-  },
-  {
-    id: "election-system",
-    title: "Election Management System",
-    description:
-      "A role-based election management prototype supporting voter registration, user verification, precinct-based ballots, election administration, voting workflows, and controlled result publication.",
-    category: "web",
-    image: "/projects/election-system/election-welcome.png",
-    cardImage: "/projects/covers/election-management-cover-v2.png",
-    cardImageAlt: "Election management system with a secure ballot box and regional results",
-    cardImageFit: "cover",
-    imageAlt: "Election Management System public welcome page",
-    imageFit: "cover",
-    caseUrl: "/projects/election-system",
-    technologies: ["Python", "Flask", "MySQL", "HTML/CSS"],
-    featured: false,
-    // Restore after the public repository's exposed mail credential is revoked,
-    // moved to environment variables, removed from Git history, and a full secret scan passes:
-    // github: "https://github.com/ellapotter/VotingSystem",
   },
   {
     id: "embedded-systems",
@@ -93,6 +74,7 @@ export const projects: Project[] = [
     caseUrl: "/projects/embedded-systems",
     technologies: [
       "ATmega328P",
+      "Arduino",
       "AVR Assembly",
       "Embedded C",
       "I2C",
@@ -100,14 +82,30 @@ export const projects: Project[] = [
       "USART",
       "ADC/DAC",
     ],
-    // TODO: Insert the real GitHub repository URL here when it exists.
-    githubStatus: "coming-soon",
+    github: "https://github.com/ellapotter/UIowa-Course-Work/tree/main/Embedded%20Systems",
+  },
+  {
+    id: "election-system",
+    title: "Election Management System",
+    description:
+      "A role-based election management prototype supporting voter registration, user verification, precinct-based ballots, election administration, and voting workflows.",
+    category: "web",
+    image: "/projects/election-system/election-welcome.png",
+    cardImage: "/projects/covers/election-management-cover-v2.png",
+    cardImageAlt: "Election management system with a secure ballot box and regional results",
+    cardImageFit: "cover",
+    imageAlt: "Election Management System public welcome page",
+    imageFit: "cover",
+    caseUrl: "/projects/election-system",
+    technologies: ["Python", "Flask", "MySQL", "HTML/CSS"],
+    featured: false,
+    github: "https://github.com/ellapotter/VotingSystem",
   },
   {
     id: "library-database",
     title: "Library Database Management System",
     description:
-      "A full-stack library management application with patron and staff dashboards, catalog and checkout workflows, room reservations, account management, and a relational MySQL database.",
+      "A full-stack library management application with patron and staff dashboards, catalog management, checkout workflows, room reservations, account management, and a relational MySQL database.",
     category: "web",
     image: "/projects/library-database/staff-dashboard.png",
     cardImage: "/projects/covers/library-database-cover-v2.png",
@@ -123,7 +121,7 @@ export const projects: Project[] = [
     id: "giftwise",
     title: "GiftWise",
     description:
-      "A SaaS-style Ruby on Rails application that helps users organize recipients, plan gift-giving events, track budgets, manage gift ideas, and generate personalized suggestions with AI.",
+      "A SaaS-style Ruby on Rails application that helps users organize recipients, plan gift-giving events, track budgets, manage gift ideas, and generate personalized gift suggestions with AI.",
     category: "web",
     image: "/projects/giftwise/giftwise-icon.svg",
     cardImage: "/projects/giftwise/giftwise-icon.svg",
@@ -320,16 +318,8 @@ export const embeddedSystemsCaseStudy = {
       alt: "PWM fan controller showing duty-cycle and fan status on an LCD",
     },
     {
-      src: "/projects/embedded-systems/img_4694.jpg",
-      alt: "Complete digital compass prototype with LCD, LEDs, and breadboard circuitry",
-    },
-    {
-      src: "/projects/embedded-systems/img_4723.png",
+      src: "/projects/embedded-systems/compass-cardinal-direction.png",
       alt: "Compass display showing cardinal direction and heading in degrees",
-    },
-    {
-      src: "/projects/embedded-systems/img_4372.jpg",
-      alt: "Supporting hardware development photograph for the embedded systems prototype",
     },
   ],
   reflection: {
@@ -464,7 +454,7 @@ export const libraryDatabaseCaseStudy = {
       "The application validates material availability, detects duplicate pending requests, checks for active checkouts, and displays success or error messages to the user. The database includes triggers that help synchronize material availability with checkout and return records.",
   },
   sqlCapabilities: {
-    heading: "Business Logic at the Database Layer",
+    heading: "Logic at the Database Layer",
     views: {
       heading: "Views",
       description: "The database defines reusable representations of material and reservation information:",
@@ -869,12 +859,12 @@ export const electionSystemCaseStudy = {
   eyebrow: "Academic Project · Full-Stack Development",
   title: "Election Management System",
   status: "Completed prototype",
-  heroImageAlt: "Election administration page listing sample elections, dates, races, precincts, and ballot controls",
+  heroImageAlt: "Election Management System voter home page with election and account options",
   hero: { intro: "A full-stack election management prototype built with Python, Flask, and MySQL. The application models separate voter, manager, and administrator workflows, including account registration, user verification, precinct-based ballots, election configuration, ballot activation, voting, result verification, and controlled public result release." },
   overview: { heading: "Modeling an Election from Registration to Results", paragraphs: [
-    "The Election Management System explores the many connected workflows required to organize an election. Rather than focusing only on casting a vote, the application includes voter registration, account approval, precinct configuration, election and race management, ballot generation, manager assignments, voting, result calculation, and public result release.",
+    "The election management system explores the many connected workflows required to organize an election. Rather than focusing only on casting a vote, the application includes voter registration, account approval, precinct configuration, election and race management, ballot generation, manager assignments, voting, result calculation, and public result release.",
     "The application uses separate voter, manager, and administrator roles. Each role receives different routes and interface options based on its responsibilities. Flask blueprints separate authentication, primary voter features, and administrative operations, while controller modules organize database logic for users, elections, races, candidates, precincts, ballots, managers, notifications, and email.",
-    "This project strengthened my understanding of full-stack development, relational data modeling, role-based workflows, server-rendered interfaces, session-based voting flows, database-backed business rules, and automated testing.",
+    "This project strengthened my understanding of full-stack development, relational data modeling, role-based workflows, session-based flows, database-backed business rules, and automated testing.",
   ] },
   electionCaseStudy: {
     scope: { heading: "Contributions and Technical Scope", description: "This project required integrating authentication, election configuration, relational database design, voting logic, administrative workflows, interface development, and testing into one connected system.", items: ["Python and Flask development", "MySQL schema design", "Server-rendered Jinja templates", "Role-based routes and dashboards", "Election and precinct management", "Ballot and voting workflows", "Form validation", "Testing and debugging", "Technical integration"] },
@@ -896,12 +886,11 @@ export const electionSystemCaseStudy = {
     controls: ["Passwords are hashed with bcrypt", "Flask-Login manages authenticated sessions", "Pending users cannot log in", "Administrative and manager routes check user roles", "Manager and administrator registration requires invite codes", "Login attempts are tracked", "Account approval is separated from signup", "Profile changes can require administrative review", "Notifications communicate approval and rejection events"],
     results: "The database contains an internal election-results view and a public-results view. The public view joins election data with a release flag so results remain hidden until an administrator explicitly releases them.",
     gallery: [
-      { src: "/projects/election-system/election-welcome.png", alt: "Election prototype welcome page with signup and login options", caption: "The public landing page directs users to account creation or login." },
-      { src: "/projects/election-system/voter-signup.png", alt: "Voter signup form with role selection and blank registration fields", caption: "Role-specific signup collects the information required for account review." },
-      { src: "/projects/election-system/election-management.png", alt: "Election administration page listing sample elections and ballot controls", caption: "Administrators can review elections and manage their associated ballots." },
-      { src: "/projects/election-system/precinct-associations.png", alt: "Election and precinct association management interface", caption: "Election and race configuration determines which precincts receive each ballot." },
-      { src: "/projects/election-system/manager-assignments.png", alt: "Manager assignment interface showing sample election cards", caption: "Administrators assign managers to election polling locations." },
-      { src: "/projects/election-system/voter-dashboard.png", alt: "Sample voter dashboard with voting and profile actions", caption: "Verified voters receive a simplified dashboard for voting and profile management." },
+      { src: "/projects/election-system/VoterSignUp.png", alt: "Election Management System voter signup form", caption: "Voters create an account by entering the information required for registration." },
+      { src: "/projects/election-system/Verification.png", alt: "Election Management System voter verification interface", caption: "Administrators review voter information as part of the account-verification workflow." },
+      { src: "/projects/election-system/SearchVoters.png", alt: "Election Management System voter search interface", caption: "Administrators search and review registered voters." },
+      { src: "/projects/election-system/ElectionManagement.png", alt: "Election Management System election management interface", caption: "Administrators create and manage elections and their ballot settings." },
+      { src: "/projects/election-system/AssignPrecincts.png", alt: "Election Management System precinct assignment interface", caption: "Election configuration connects voters and ballots to the appropriate precincts." },
     ],
     tests: ["Election creation", "Race and precinct associations", "Precinct and ZIP-code behavior", "Candidate operations", "Application routes", "Results hidden before release", "Results visible after release", "Public view enforcing the release flag", "Voters blocked from administrative dashboards", "Administrators allowed to access administrative dashboards"],
     challenges: [
@@ -912,7 +901,7 @@ export const electionSystemCaseStudy = {
     ],
     conclusion: "This project strengthened my ability to break a large real-world process into roles, data relationships, routes, validation rules, and state transitions. It also showed me why high-stakes systems require both functional correctness and a much deeper level of security review.",
     technologies: ["Python", "Flask", "Flask Blueprints", "Flask-Login", "Flask-Mail", "bcrypt", "MySQL", "Jinja", "HTML/CSS", "JavaScript", "pytest", "Git and GitHub"],
-    skills: ["Full-stack development", "Python", "Flask", "MySQL", "Relational database design", "Role-based access", "Authentication", "Password hashing", "Server-side sessions", "CRUD operations", "Dynamic queries", "Form validation", "Election modeling", "Workflow design", "State management", "Jinja templates", "Automated testing", "Debugging", "Security awareness", "Technical documentation"],
+    skills: ["Full-stack development", "Relational database design", "Role-based access", "Authentication", "Password hashing", "Server-side sessions", "CRUD operations", "Dynamic queries", "Form validation", "Workflow design", "State management", "Automated testing", "Debugging", "Security awareness"],
   },
 };
 
@@ -920,29 +909,29 @@ export const rideMatchCaseStudy = {
   slug: "ridematch",
   eyebrow: "Featured Project · Senior Design",
   title: "RideMatch",
-  status: "Completed prototype",
+  status: "Prototype complete · In active development",
   hero: {
-    intro: "RideMatch is a completed senior-design prototype that replaces automatic driver assignment with a rider-controlled, preference-aware matching experience. Riders can browse compatible available drivers and choose who they request rather than receiving an automatic assignment.",
+    intro: "RideMatch is a completed prototype that replaces automatic driver assignment with a rider-controlled, preference-based matching experience. Riders can browse compatible available drivers and choose who they request rather than receiving an automatic assignment.",
+
   },
   overview: {
     heading: "A More Personal and Transparent Rideshare Experience",
     paragraphs: [
       "RideMatch is a multi-interface rideshare prototype created by a three-person engineering senior-design team. Its purpose is to make rides more personalized and transparent by allowing riders to choose among compatible available drivers instead of receiving an automatic assignment.",
-      "The team delivered separate Rider and Driver Flutter applications, a browser-based Flask administrative portal, shared Python services, and a MySQL database. The working prototype was tested locally but was not published to the iOS or Android app stores.",
-      "Production use would require additional hosting, security, privacy, payment, mapping, monitoring, and deployment work. The prototype demonstrates the product concept and connected role-based workflows without claiming production readiness.",
+      "The team delivered separate Rider and Driver Flutter applications, a browser-based Flask administrative portal, shared Python services, and a MySQL database. The working prototype has been tested locally and demonstrates the product concept across its connected, role-based workflows.",
+      "Although the senior-design prototype is complete, my work on RideMatch is continuing. Our team continues to gather feedback from potential users, use those insights to guide improvements, and prepare the application for deployment. Production readiness will also require additional work across hosting, security, privacy, payments, mapping, monitoring, and broader device testing.",
     ],
   },
   role: {
     heading: "My Role: Team Lead and Full-Stack Developer",
     paragraphs: [
-      "RideMatch was a collaborative three-person project with responsibilities rotating across the Rider, Driver, Admin, backend, and database components. As team lead, I coordinated tasks, recurring meetings, development progress, documentation, and the GitHub workflow while contributing directly to implementation.",
-      "My primary technical work included the basic administrative login and protected access, significant portions of the admin dashboard, driver review and approval workflows, matching rules, ride-flow support, event logging, testing, debugging, and final system integration.",
+      "RideMatch was a collaborative three-person project with responsibilities rotating across the Rider, Driver, Admin, backend, and database components. As team lead, I coordinated tasks, development progress, documentation, and the GitHub workflow while contributing directly to implementation.",
+      "My primary technical work included the administrative web panel, preference-based matching rules, ride-flow support, event logging, testing, debugging, and final system integration.",
     ],
     responsibilities: [
       "Established and maintained the team’s GitHub workflow",
       "Coordinated project tasks, meetings, and development progress",
-      "Built basic administrative login and protected admin access",
-      "Developed significant portions of the administrative dashboard",
+      "Built basic administrative dashbaord",
       "Implemented driver review, approval, and denial workflows",
       "Contributed to rider-driver matching rules",
       "Supported ride-request and ride-progression flows",
@@ -951,13 +940,13 @@ export const rideMatchCaseStudy = {
     ],
   },
   rideMatchDetails: {
-    differentiator: "RideMatch replaces automatic driver assignment with a rider-controlled, preference-aware matching experience.",
+    differentiator: "RideMatch replaces automatic driver assignment with a rider-controlled, preference-based matching experience.",
     flow: [
       "A rider or driver creates an account and signs in.",
       "A new driver passes the administrative review workflow before activation.",
       "A rider selects pickup and destination locations.",
       "The system finds approved, available drivers using location and ride criteria.",
-      "Preference-aware matching compares rider priorities with driver characteristics and shared preferences.",
+      "Preference-based matching compares rider priorities with driver characteristics and shared preferences.",
       "The rider browses drivers with a swipe-based interface.",
       "A selected driver receives the request and can accept or decline it.",
       "An accepted request moves through the ride lifecycle.",
@@ -977,13 +966,14 @@ export const rideMatchCaseStudy = {
     process: ["Two-week Agile sprints", "Recurring team meetings", "GitHub branches, pull requests, issues, and task tracking", "Low-fidelity UI designs", "Learning Flutter during development", "Iterative mobile, API, and database integration", "Manual tests and cross-client scenarios", "pytest and Flutter widget testing", "Refinement based on constraints and feedback"],
     limitations: ["Cloud hosting and production database infrastructure", "Secure secret and environment management", "More extensive privacy and security review", "Production-grade mapping and real-time location services", "Hardened payment workflows", "Broader device and platform testing", "iOS and Android app-store deployment", "Monitoring, scalability, and operational support"],
     screenshots: [
-      { src: "/projects/ridematch/login.png", alt: "RideMatch Rider authentication screen", caption: "Rider authentication introduces the mobile experience." },
-      { src: "/projects/ridematch/rider-dashboard.png", alt: "RideMatch Rider dashboard with trip summary and ride preferences", caption: "The rider dashboard summarizes trips, ratings, and selected comfort preferences." },
-      { src: "/projects/ridematch/ride-planning.png", alt: "Ride planning screen with map, pickup, destination, and ride type fields", caption: "Map-based planning supports current location, pickup, destination, and ride type." },
-      { src: "/projects/ridematch/driver-matching.png", alt: "Swipe-based driver recommendation showing compatibility indicators", caption: "Riders compare available drivers using recommendation and shared-preference context." },
-      { src: "/projects/ridematch/driver-dispatch.png", alt: "Driver dispatch screen with an incoming ride assignment and response window", caption: "Drivers manage availability and respond to incoming ride requests." },
-      { src: "/projects/ridematch/driver-income.png", alt: "Driver income screen showing fares, tips, and pay-period summaries", caption: "The driver experience summarizes fare share, tips, and payout periods using demo data." },
-      { src: "/projects/ridematch/ride-preferences.png", alt: "Ride preference screen with selectable and prioritized comfort options", caption: "Riders select and prioritize comfort preferences used during matching." },
+      { src: "/projects/ridematch/RiderDashboard.png", alt: "RideMatch Rider dashboard", caption: "The rider dashboard provides quick access to the rider experience." },
+      { src: "/projects/ridematch/RideMatchLogIn.png", alt: "RideMatch login screen", caption: "The RideMatch login screen introduces the mobile experience." },
+      { src: "/projects/ridematch/RiderLoggingIn.png", alt: "Rider entering login credentials in RideMatch", caption: "Riders sign in to access their account and begin planning a ride." },
+      { src: "/projects/ridematch/RideRequest.png", alt: "RideMatch ride request screen", caption: "The ride request flow lets riders enter trip details and request a driver." },
+      { src: "/projects/ridematch/Swipe.png", alt: "RideMatch swipe-based driver selection screen", caption: "Riders browse and compare available drivers through the swipe-based matching experience." },
+      { src: "/projects/ridematch/DriverDispatch.png", alt: "RideMatch driver dispatch screen", caption: "Drivers receive trip details and respond to incoming ride requests." },
+      { src: "/projects/ridematch/RiderChat.png", alt: "RideMatch chat between a rider and driver", caption: "In-app chat helps riders and drivers communicate during a trip." },
+      { src: "/projects/ridematch/PayScreen.png", alt: "RideMatch payment screen", caption: "The payment screen completes the rider workflow after the trip." },
     ],
   },
 };

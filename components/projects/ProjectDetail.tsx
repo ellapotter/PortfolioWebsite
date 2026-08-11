@@ -121,7 +121,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
                   />
                 </div>
                 <figcaption className="px-2 pb-1 pt-3 text-center font-mono text-xs text-pink-600">
-                  {caseStudy.title} project preview
+                  {caseStudy.slug === "embedded-systems" ? "Digital Compass Project" : `${caseStudy.title} project preview`}
                 </figcaption>
               </figure>
             </div>
@@ -455,7 +455,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         {caseStudy.galleryImages && (
           <section className={`bg-white ${sectionPadding}`}>
             <div className={sectionContainer}>
-              <SectionHeading label="Visuals" title="Project Gallery" />
+              <SectionHeading label="Visuals" title={caseStudy.slug === "embedded-systems" ? "Lab Gallery" : "Project Gallery"} />
               <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {caseStudy.galleryImages.map((image) => (
                   <figure key={image.src} className="overflow-hidden rounded-3xl border border-pink-200 bg-white shadow-sm shadow-pink-100">
