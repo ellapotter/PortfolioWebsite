@@ -128,12 +128,6 @@ export function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/game"
-              className="ml-1 rounded-full border border-pink-300 bg-white px-3 py-2 text-sm font-semibold text-pink-700 shadow-sm shadow-pink-200/70 transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 lg:px-4 xl:text-base"
-            >
-              Play Game
-            </Link>
           </div>
         </div>
       </div>
