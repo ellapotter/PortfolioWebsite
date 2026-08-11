@@ -93,7 +93,7 @@ export function Navbar() {
           className="shrink-0 rounded-full transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
         >
           <Image
-            src="/WebIcon.png"
+            src="/PinkOnPinkLogo.png"
             alt=""
             width={56}
             height={56}
