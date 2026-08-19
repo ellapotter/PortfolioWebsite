@@ -74,26 +74,28 @@ export function About() {
 
         <div id="experience" className="mt-12 space-y-4 lg:mt-16 lg:space-y-6">
           <h3 className={`${sectionLabel} text-left lg:text-base`}>Experience</h3>
-          <article className="grid gap-6 rounded-3xl border border-pink-200 bg-white p-6 card-shadow md:grid-cols-[minmax(14rem,0.72fr)_minmax(0,1.28fr)] lg:gap-10 lg:p-8">
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-100">
-                <Presentation className="h-6 w-6 text-pink-700" aria-hidden="true" />
+          {experience.map((role) => (
+            <article key={`${role.organization}-${role.title}`} className="grid gap-6 rounded-3xl border border-pink-200 bg-white p-6 card-shadow md:grid-cols-[minmax(14rem,0.72fr)_minmax(0,1.28fr)] lg:gap-10 lg:p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-100">
+                  <Presentation className="h-6 w-6 text-pink-700" aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-plum-950 lg:text-xl">{role.title}</h4>
+                  <p className="mt-1 font-medium text-pink-700">{role.organization}</p>
+                  <p className="mt-1 font-mono text-sm text-plum-600">{role.period}</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-semibold text-plum-950 lg:text-xl">{experience.title}</h4>
-                <p className="mt-1 font-medium text-pink-700">{experience.organization}</p>
-                <p className="mt-1 font-mono text-sm text-plum-600">{experience.period}</p>
-              </div>
-            </div>
-            <ul className="space-y-3 border-pink-100 md:border-l md:pl-8">
-              {experience.highlights.map((highlight) => (
-                <li key={highlight} className="flex items-start gap-3 text-sm leading-relaxed text-plum-700 lg:text-base">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-pink-500" aria-hidden="true" />
-                  {highlight}
-                </li>
-              ))}
-            </ul>
-          </article>
+              <ul className="space-y-3 border-pink-100 md:border-l md:pl-8">
+                {role.highlights.map((highlight) => (
+                  <li key={highlight} className="flex items-start gap-3 text-sm leading-relaxed text-plum-700 lg:text-base">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-pink-500" aria-hidden="true" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </div>
     </AnimatedSection>

@@ -58,16 +58,40 @@ export const skills: Skill[] = [
   { name: "Docker", icon: "docker" },
 ];
 
-export const experience = {
-  title: "Lead Coding & Robotics Instructor",
-  organization: "iCode",
-  period: "Summer 2025",
-  highlights: [
-    "Led coding, robotics, and gaming lessons for students ages 6–15",
-    "Taught beginner-friendly programming concepts using Python, Java, and C#",
-    "Helped students debug code, solve problems, and build confidence with technology",
-  ],
-};
+export const experience = [
+  {
+    title: "Software Engineering Intern",
+    organization: "RideMatch",
+    period: "May 2026 – Present",
+    highlights: [
+      "Continue developing RideMatch beyond the initial senior design prototype into a production-ready application",
+      "Develop and improve Flutter-based rider and driver mobile applications",
+      "Debug application functionality and integrate frontend, backend, database, and payment systems",
+      "Support application testing, deployment, and preparation for public release",
+      "Collaborate with the project sponsor to translate business requirements into technical features",
+    ],
+  },
+  {
+    title: "Lead Coding & Robotics Instructor",
+    organization: "iCode",
+    period: "Summer 2025",
+    highlights: [
+      "Led coding, robotics, and gaming lessons for students ages 6–15",
+      "Taught beginner-friendly programming concepts using Python, Java, and C#",
+      "Helped students debug code, solve problems, and build confidence with technology",
+    ],
+  },
+  {
+    title: "Social Media Manager",
+    organization: "Polished Nails & Spa",
+    period: "May 2023 – Present",
+    highlights: [
+      "Curate and design engaging social media posts",
+      "Interact with customers across social platforms",
+      "Grow audience engagement and appointment bookings",
+    ],
+  },
+];
 
 export type EmbeddedSubProject = {
   name: string;
@@ -79,7 +103,7 @@ export { projects, projectsSection, projectFilters, getProjectCategoryLabel } fr
 
 export const contact = {
   heading: "Let's build something together",
-  subheading: "Open to software engineering, project collaborations, and opportunities to solve interesting problems.",
+  subheading: "I am open to software engineering, project collaborations, and opportunities to solve interesting problems.",
   email: "ellapotter80@gmail.com",
   github: "https://github.com/ellapotter",
   linkedin: "https://www.linkedin.com/in/ella-potter-7384632a8/",
