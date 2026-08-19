@@ -67,7 +67,7 @@ export const projects: Project[] = [
     description:
       "A series of ATmega328P hardware and software projects culminating in a digital compass with sensor communication, an LCD interface, directional LEDs, push-button controls, and mixed-voltage circuitry.",
     category: "embedded",
-    image: "/projects/embedded-systems/img_4694.jpg",
+    image: "/projects/embedded-systems/IMG_4694.jpg",
     cardImage: "/projects/covers/embedded-systems-cover-v2.png",
     cardImageAlt: "Embedded digital compass circuit on a breadboard",
     cardImageFit: "cover",
@@ -310,11 +310,11 @@ export const embeddedSystemsCaseStudy = {
   },
   galleryImages: [
     {
-      src: "/projects/embedded-systems/img_2968.jpg",
+      src: "/projects/embedded-systems/IMG_2968.jpg",
       alt: "Hexadecimal counter using a seven-segment display and ATmega328P hardware setup",
     },
     {
-      src: "/projects/embedded-systems/img_4012.jpg",
+      src: "/projects/embedded-systems/IMG_4012.jpg",
       alt: "PWM fan controller showing duty-cycle and fan status on an LCD",
     },
     {
