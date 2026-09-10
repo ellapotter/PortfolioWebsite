@@ -12,7 +12,7 @@ export const site = {
 export const about = {
   heading: "About Me",
   portrait: {
-    src: "/ProfilePicture.jpg",
+    src: "/ProfilePicture.png",
     fallbackSrc: "/images/ella-portrait-placeholder.svg",
     alt: "Portrait of Ella Potter.",
   },
