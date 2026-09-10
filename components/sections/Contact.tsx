@@ -43,7 +43,7 @@ export function Contact() {
                   whileHover: { scale: 1.05 },
                   whileTap: { scale: 0.98 },
                 })}
-                className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-5 py-2.5 text-sm font-medium text-pink-800 shadow-sm transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-600 lg:px-6 lg:py-3 lg:text-base"
+                className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-surface px-5 py-2.5 text-sm font-medium text-pink-800 shadow-sm transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-600 lg:px-6 lg:py-3 lg:text-base"
               >
                 <Icon className="h-4 w-4 lg:h-5 lg:w-5" />
                 {label}
@@ -57,7 +57,7 @@ export function Contact() {
           className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full px-10 text-sm font-semibold lg:h-16 lg:px-12 lg:text-base"
         >
           <span className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-pink-500 to-fuchsia-400 p-[2px]">
-            <span className="flex h-full w-full items-center justify-center rounded-full bg-white transition-colors group-hover:bg-pink-50" />
+            <span className="flex h-full w-full items-center justify-center rounded-full bg-surface transition-colors group-hover:bg-pink-50" />
           </span>
           <span className="relative gradient-text">Say hello →</span>
         </a>

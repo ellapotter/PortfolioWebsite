@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title: `${site.name} | ${site.role}`,
   description: site.tagline,
   icons: {
-    icon: "/PinkOnPinkLogo.png",
-    apple: "/PinkOnPinkLogo.png",
+    icon: "/PurpleBlueLogo.png",
+    apple: "/PurpleBlueLogo.png",
   },
   openGraph: {
     title: `${site.name} | Portfolio`,

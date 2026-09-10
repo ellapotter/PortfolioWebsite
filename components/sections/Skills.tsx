@@ -43,7 +43,7 @@ function SkillLogo({ skill }: { skill: Skill }) {
   const Icon = iconMap[skill.icon];
 
   return (
-    <div className="group flex flex-col items-center gap-3 rounded-2xl border border-pink-200 bg-white p-5 shadow-sm shadow-pink-100 transition-all hover:-translate-y-1 hover:border-pink-300 hover:shadow-md hover:shadow-pink-200 lg:gap-4 lg:rounded-3xl lg:p-6">
+    <div className="group flex flex-col items-center gap-3 rounded-2xl border border-pink-200 bg-surface p-5 shadow-sm shadow-pink-100 transition-all hover:-translate-y-1 hover:border-pink-300 hover:shadow-md hover:shadow-pink-200 lg:gap-4 lg:rounded-3xl lg:p-6">
       <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-pink-50 lg:h-16 lg:w-16">
         <Icon className="h-8 w-8 text-pink-700 transition-colors group-hover:text-pink-500 lg:h-9 lg:w-9" />
       </div>

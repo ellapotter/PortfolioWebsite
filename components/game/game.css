@@ -1,25 +1,25 @@
 /* Scoped to Defend the Stack — do not leak onto other routes. */
 
 .dts-shell {
-  --dts-bg: #1a0f18;
-  --dts-panel: #2a1524;
-  --dts-panel-2: #351929;
-  --dts-blush: #fce7f3;
-  --dts-pink: #f9a8d4;
-  --dts-magenta: #e879f9;
-  --dts-plum: #4c1530;
-  --dts-text: #fff7fb;
-  --dts-muted: #f5d0e0;
+  --dts-bg: #090b1a;
+  --dts-panel: #171936;
+  --dts-panel-2: #20234a;
+  --dts-blush: #11132b;
+  --dts-pink: #a78bfa;
+  --dts-magenta: #38bdf8;
+  --dts-plum: #8b5cf6;
+  --dts-text: #f3f1ff;
+  --dts-muted: #aaa8cf;
   --dts-success: #4ade80;
   --dts-danger: #fb7185;
   --dts-gold: #fbbf24;
-  --dts-border: rgba(249, 168, 212, 0.28);
+  --dts-border: rgba(139, 92, 246, 0.3);
 
   min-height: 100vh;
   background:
-    radial-gradient(circle at 15% 10%, rgba(236, 72, 153, 0.22), transparent 35%),
-    radial-gradient(circle at 85% 0%, rgba(192, 132, 252, 0.18), transparent 30%),
-    linear-gradient(160deg, #140b12 0%, #1f101b 45%, #2a1322 100%);
+    radial-gradient(circle at 15% 10%, rgba(139, 92, 246, 0.24), transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(59, 130, 246, 0.2), transparent 30%),
+    linear-gradient(160deg, #070814 0%, #0d1024 45%, #151936 100%);
   color: var(--dts-text);
   padding: 1rem 1rem 2rem;
 }
@@ -98,9 +98,9 @@
   border: 1px solid var(--dts-border);
   border-radius: 1.25rem;
   background:
-    linear-gradient(rgba(249, 168, 212, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(249, 168, 212, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, #24131f, #1b1018);
+    linear-gradient(rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, #171936, #11132b);
   background-size: 28px 28px, 28px 28px, auto;
   aspect-ratio: 10 / 7;
   width: 100%;
@@ -137,7 +137,7 @@
 }
 
 .dts-cell--path {
-  background: rgba(244, 114, 182, 0.08);
+  background: rgba(139, 92, 246, 0.1);
 }
 
 .dts-cell--pad {
@@ -154,7 +154,7 @@
   width: 100%;
   height: 100%;
   min-height: 2.5rem;
-  border: 1px dashed rgba(249, 168, 212, 0.45);
+  border: 1px dashed rgba(167, 139, 250, 0.45);
   border-radius: 0.8rem;
   background: rgba(252, 231, 243, 0.08);
   cursor: pointer;
@@ -164,7 +164,7 @@
 .dts-bench__empty:focus-visible,
 .dts-button:focus-visible,
 .dts-unit:focus-visible {
-  outline: 2px solid #f0abfc;
+  outline: 2px solid #60a5fa;
   outline-offset: 2px;
 }
 
@@ -185,9 +185,9 @@
   justify-content: center;
   gap: 0.15rem;
   border-radius: 0.9rem;
-  border: 1px solid rgba(232, 121, 249, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.55);
   background: linear-gradient(160deg, rgba(76, 21, 48, 0.95), rgba(36, 16, 28, 0.95));
-  box-shadow: 0 0 0 1px rgba(249, 168, 212, 0.12), 0 8px 24px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.14), 0 8px 24px rgba(0, 0, 0, 0.28);
   font-size: 0.65rem;
   letter-spacing: 0.08em;
   z-index: 2;
@@ -219,8 +219,8 @@
   border: 2px solid color-mix(in srgb, var(--unit-accent) 75%, white);
   background: linear-gradient(
     165deg,
-    color-mix(in srgb, var(--unit-soft) 35%, #1b1018),
-    #1b1018 70%
+    color-mix(in srgb, var(--unit-soft) 35%, #11132b),
+    #11132b 70%
   );
   color: var(--dts-text);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -310,7 +310,7 @@
   place-items: center;
   width: 1.7rem;
   height: 1.7rem;
-  background: color-mix(in srgb, var(--enemy-accent) 30%, #1b1018);
+  background: color-mix(in srgb, var(--enemy-accent) 30%, #11132b);
   border: 1.5px solid var(--enemy-accent);
   color: var(--enemy-accent);
 }
@@ -323,7 +323,7 @@
   clip-path: polygon(50% 8%, 92% 88%, 8% 88%);
   border: none;
   background: var(--enemy-accent);
-  color: #1b1018;
+  color: #11132b;
 }
 
 .dts-enemy__body--hex {
@@ -474,12 +474,12 @@
 
 .dts-button--primary {
   border-color: transparent;
-  background: linear-gradient(135deg, #ec4899, #d946ef);
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
   color: white;
 }
 
 .dts-button--primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, #f472b6, #e879f9);
+  background: linear-gradient(135deg, #a78bfa, #38bdf8);
 }
 
 .dts-button--ghost {
@@ -541,7 +541,7 @@
 .dts-bench__slot {
   min-height: 4.6rem;
   border-radius: 0.85rem;
-  border: 1px dashed rgba(249, 168, 212, 0.35);
+  border: 1px dashed rgba(167, 139, 250, 0.35);
   background: rgba(0, 0, 0, 0.18);
   overflow: hidden;
 }
@@ -585,7 +585,7 @@
   width: min(100%, 28rem);
   border-radius: 1.1rem;
   border: 1px solid var(--dts-border);
-  background: linear-gradient(180deg, #3a1c2f, #24131f);
+  background: linear-gradient(180deg, #20234a, #171936);
   padding: 1.25rem;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }

@@ -1,25 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #fdf2f8;
-  --color-foreground: #4c0519;
-  --color-muted: #9d4b6a;
-  --color-surface: #ffffff;
-  --color-surface-hover: #fce7f3;
-  --color-border: #fbcfe8;
-  --color-plum-950: #351124;
-  --color-plum-900: #4c1530;
-  --color-plum-800: #642344;
-  --color-plum-700: #78405a;
-  --color-plum-600: #8b5870;
-  --shadow-card: 0 18px 50px -28px rgb(76 5 25 / 0.32);
+  --color-background: #090b1a;
+  --color-foreground: #f3f1ff;
+  --color-muted: #aaa8cf;
+  --color-surface: #171936;
+  --color-surface-hover: #20234a;
+  --color-border: #343761;
+
+  /* Midnight Aurora: existing utility scales now share one cohesive theme. */
+  --color-pink-50: #090b1a;
+  --color-pink-100: #11132b;
+  --color-pink-200: #343761;
+  --color-pink-300: #565a91;
+  --color-pink-400: #38bdf8;
+  --color-pink-500: #8b5cf6;
+  --color-pink-600: #7c3aed;
+  --color-pink-700: #c4b5fd;
+  --color-pink-800: #cfcef0;
+  --color-pink-900: #e5e2ff;
+  --color-pink-950: #f3f1ff;
+  --color-rose-50: #11132b;
+  --color-rose-300: #3b82f6;
+  --color-fuchsia-200: #20234a;
+  --color-fuchsia-300: #60a5fa;
+  --color-fuchsia-400: #38bdf8;
+  --color-fuchsia-500: #3b82f6;
+  --color-fuchsia-600: #60a5fa;
+  --color-plum-950: #f3f1ff;
+  --color-plum-900: #e5e2ff;
+  --color-plum-800: #cfcef0;
+  --color-plum-700: #aaa8cf;
+  --color-plum-600: #8583ad;
+  --shadow-card: 0 22px 60px -30px rgb(0 0 0 / 0.72);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 section[id] {
@@ -39,26 +59,26 @@ section[id] {
 }
 
 body {
-  background-color: #fdf2f8;
-  color: #4c0519;
+  background-color: #090b1a;
+  color: #f3f1ff;
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 ::selection {
-  background-color: #f9a8d4;
-  color: #4c0519;
+  background-color: #8b5cf6;
+  color: #f3f1ff;
 }
 
 .grid-bg {
-  background-color: #fdf2f8;
+  background-color: #090b1a;
   background-image:
-    linear-gradient(#fbcfe8 1px, transparent 1px),
-    linear-gradient(90deg, #fbcfe8 1px, transparent 1px);
+    linear-gradient(rgb(52 55 97 / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(52 55 97 / 0.5) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ec4899, #f472b6, #e879f9);
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6, #3b82f6, #38bdf8);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -69,13 +89,13 @@ body {
 }
 
 .glow-pink {
-  box-shadow: 0 12px 40px rgb(244 114 182 / 0.35);
+  box-shadow: 0 12px 40px rgb(139 92 246 / 0.35);
 }
 
 .glow-rose {
-  box-shadow: 0 12px 40px rgb(251 113 133 / 0.35);
+  box-shadow: 0 12px 40px rgb(59 130 246 / 0.35);
 }
 
 .glow-fuchsia {
-  box-shadow: 0 12px 40px rgb(232 121 249 / 0.35);
+  box-shadow: 0 12px 40px rgb(56 189 248 / 0.35);
 }

@@ -20,7 +20,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <article
-      className={`group flex h-full flex-col overflow-hidden rounded-3xl bg-white card-shadow transition-all motion-safe:hover:-translate-y-1 ${
+      className={`group flex h-full flex-col overflow-hidden rounded-3xl bg-surface card-shadow transition-all motion-safe:hover:-translate-y-1 ${
         project.featured
           ? "border-2 border-pink-400 ring-4 ring-pink-100 shadow-pink-200 hover:border-pink-500 hover:shadow-pink-300"
           : "border border-pink-200 shadow-pink-100 hover:border-pink-300 hover:shadow-pink-200"
@@ -47,7 +47,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           />
         )}
 
-        <span className="pointer-events-none absolute left-4 top-4 z-20 rounded-full border border-pink-200/80 bg-white/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-pink-700 backdrop-blur-sm">
+        <span className="pointer-events-none absolute left-4 top-4 z-20 rounded-full border border-pink-200/80 bg-surface/90 px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-pink-700 backdrop-blur-sm">
           • {categoryLabel}
         </span>
         {project.featured && (
@@ -99,7 +99,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target: "_blank",
                 rel: "noopener noreferrer",
               })}
-              className="rounded-full bg-pink-600 px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-pink-700"
+              className="rounded-full bg-pink-600 px-4 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-violet-500"
             >
               View Project →
             </Link>

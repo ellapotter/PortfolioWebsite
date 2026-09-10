@@ -23,7 +23,7 @@ export const ENEMY_TYPES: Record<EnemyTypeId, EnemyTypeConfig> = {
     reward: 12,
     description: "A standard bug with average health and speed.",
     shape: "square",
-    accent: "#f472b6",
+    accent: "#a78bfa",
     splitsOnDefeat: false,
   },
   warning: {

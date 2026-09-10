@@ -40,7 +40,7 @@ export function Hero() {
     <div
       className={`relative z-10 flex min-h-screen flex-col items-center justify-center pt-16 text-center sm:px-8 lg:px-12 ${sectionContainer}`}
     >
-      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-pink-200 bg-white shadow-md shadow-pink-200/50 lg:h-20 lg:w-20 lg:rounded-3xl">
+      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-pink-200 bg-surface shadow-md shadow-pink-200/50 lg:h-20 lg:w-20 lg:rounded-3xl">
         <Sparkles className="h-7 w-7 text-pink-500 lg:h-9 lg:w-9" />
       </div>
 
@@ -50,7 +50,7 @@ export function Hero() {
         <span className="gradient-text">{site.name}</span>
       </h1>
 
-      <div className="mb-10 flex min-h-[4.5rem] w-full max-w-3xl flex-col items-center justify-center rounded-2xl border border-pink-200 bg-white/90 px-6 py-5 shadow-md shadow-pink-100 lg:max-w-4xl lg:rounded-3xl lg:px-8 lg:py-7">
+      <div className="mb-10 flex min-h-[4.5rem] w-full max-w-3xl flex-col items-center justify-center rounded-2xl border border-pink-200 bg-surface/90 px-6 py-5 shadow-md shadow-pink-100 lg:max-w-4xl lg:rounded-3xl lg:px-8 lg:py-7">
         <p className="mb-2 font-mono text-xs uppercase tracking-widest text-pink-500 lg:text-sm">
         </p>
         <TypewriterSkills
@@ -65,7 +65,7 @@ export function Hero() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-pink-300 bg-white px-5 py-2.5 text-sm font-semibold text-pink-700 shadow-md shadow-pink-200/70 transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 lg:text-base"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-pink-300 bg-surface px-5 py-2.5 text-sm font-semibold text-pink-700 shadow-md shadow-pink-200/70 transition-colors hover:border-pink-400 hover:bg-pink-50 hover:text-pink-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 lg:text-base"
         >
           <FileText className="h-4 w-4" aria-hidden="true" />
           View Resume

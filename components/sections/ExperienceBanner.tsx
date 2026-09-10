@@ -12,7 +12,7 @@ export function ExperienceBanner() {
       <div className={sectionContainer}>
         <div className="space-y-4 lg:space-y-6">
           {experience.map((role) => (
-            <div key={`${role.organization}-${role.title}`} className="flex flex-col gap-4 rounded-2xl border border-pink-200 bg-white p-6 shadow-md shadow-pink-100 sm:flex-row sm:items-center sm:justify-between lg:rounded-3xl lg:gap-8 lg:p-8">
+            <div key={`${role.organization}-${role.title}`} className="flex flex-col gap-4 rounded-2xl border border-pink-200 bg-surface p-6 shadow-md shadow-pink-100 sm:flex-row sm:items-center sm:justify-between lg:rounded-3xl lg:gap-8 lg:p-8">
               <div className="flex items-start gap-4 lg:gap-5">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-100 lg:h-14 lg:w-14">
                   <GraduationCap className="h-6 w-6 text-pink-600 lg:h-7 lg:w-7" />

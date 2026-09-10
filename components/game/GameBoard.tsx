@@ -49,18 +49,18 @@ export function GameBoard({
       <svg className="dts-board__path" viewBox={`0 0 ${GRID.cols} ${GRID.rows}`} aria-hidden="true">
         <polyline
           fill="none"
-          stroke="rgba(244, 114, 182, 0.55)"
+          stroke="rgba(139, 92, 246, 0.55)"
           strokeWidth="0.55"
           strokeLinecap="round"
           strokeLinejoin="round"
           points={PATH_WAYPOINTS.map((p) => `${p.x},${p.y}`).join(" ")}
         />
-        <circle cx={PATH_WAYPOINTS[0].x} cy={PATH_WAYPOINTS[0].y} r="0.22" fill="#f9a8d4" />
+        <circle cx={PATH_WAYPOINTS[0].x} cy={PATH_WAYPOINTS[0].y} r="0.22" fill="#a78bfa" />
         <text
           x={PATH_WAYPOINTS[0].x}
           y={PATH_WAYPOINTS[0].y - 0.45}
           textAnchor="middle"
-          fill="#fce7f3"
+          fill="#11132b"
           fontSize="0.28"
         >
           BUGS IN

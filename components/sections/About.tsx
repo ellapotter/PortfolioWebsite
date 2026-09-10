@@ -17,7 +17,7 @@ export function About() {
     : about.portrait.fallbackSrc;
 
   return (
-    <AnimatedSection id="about" className={`bg-white ${sectionPadding}`}>
+    <AnimatedSection id="about" className={`bg-surface ${sectionPadding}`}>
       <div className={sectionContainer}>
         <div className="mb-10 text-center lg:mb-14">
           <p className={sectionLabel}>{about.heading}</p>
@@ -75,7 +75,7 @@ export function About() {
         <div id="experience" className="mt-12 space-y-4 lg:mt-16 lg:space-y-6">
           <h3 className={`${sectionLabel} text-left lg:text-base`}>Experience</h3>
           {experience.map((role) => (
-            <article key={`${role.organization}-${role.title}`} className="grid gap-6 rounded-3xl border border-pink-200 bg-white p-6 card-shadow md:grid-cols-[minmax(14rem,0.72fr)_minmax(0,1.28fr)] lg:gap-10 lg:p-8">
+            <article key={`${role.organization}-${role.title}`} className="grid gap-6 rounded-3xl border border-pink-200 bg-surface p-6 card-shadow md:grid-cols-[minmax(14rem,0.72fr)_minmax(0,1.28fr)] lg:gap-10 lg:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-pink-100">
                   <Presentation className="h-6 w-6 text-pink-700" aria-hidden="true" />

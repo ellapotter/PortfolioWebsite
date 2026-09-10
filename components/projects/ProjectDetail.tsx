@@ -31,7 +31,7 @@ type ProjectDetailProps = {
 };
 
 const cardClass =
-  "rounded-2xl border border-pink-200 bg-white p-6 shadow-sm shadow-pink-100 lg:rounded-3xl lg:p-8";
+  "rounded-2xl border border-pink-200 bg-surface p-6 shadow-sm shadow-pink-100 lg:rounded-3xl lg:p-8";
 
 function SectionHeading({ label, title }: { label: string; title: string }) {
   return (
@@ -66,7 +66,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
           <div className={`relative ${sectionContainer}`}>
             <Link
               href="/#projects"
-              className="mb-10 inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-pink-700 shadow-sm transition-colors hover:border-pink-300 hover:bg-pink-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
+              className="mb-10 inline-flex items-center gap-2 rounded-full border border-pink-200 bg-surface px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-pink-700 shadow-sm transition-colors hover:border-pink-300 hover:bg-pink-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink-500"
             >
               <ArrowLeft className="h-4 w-4" /> Back to projects
             </Link>
@@ -86,7 +86,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
                   ))}
                 </div>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-white px-4 py-2 text-sm font-medium text-pink-800">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-surface px-4 py-2 text-sm font-medium text-pink-800">
                     <span className="h-2 w-2 rounded-full bg-pink-500" aria-hidden="true" />
                     {caseStudy.status}
                   </span>
@@ -102,14 +102,14 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
                     </a>
                   )}
                   {project.githubStatus === "coming-soon" && (
-                    <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-pink-300 bg-white px-4 py-2 text-sm font-medium text-pink-700">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-pink-300 bg-surface px-4 py-2 text-sm font-medium text-pink-700">
                       Source code repository coming soon
                     </span>
                   )}
                 </div>
               </div>
 
-              <figure className="overflow-hidden rounded-3xl border border-pink-200 bg-white p-3 shadow-xl shadow-pink-200/60">
+              <figure className="overflow-hidden rounded-3xl border border-pink-200 bg-surface p-3 shadow-xl shadow-pink-200/60">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-pink-100">
                   <Image
                     src={project.image}
@@ -129,7 +129,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         </header>
 
         {caseStudy.overview && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Project overview" title={caseStudy.overview.heading} />
               <div className="grid max-w-5xl gap-5 text-base leading-relaxed text-pink-800 lg:grid-cols-2 lg:text-lg">
@@ -193,7 +193,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.featuredProject && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Featured project" title={caseStudy.featuredProject.heading} />
               <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
@@ -228,7 +228,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.components && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Platform" title="Three Connected System Components" />
               <div className="grid gap-6 lg:grid-cols-3">
@@ -255,7 +255,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
               <SectionHeading label="Capabilities" title="Key Platform Features" />
               <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {caseStudy.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 rounded-2xl border border-pink-200 bg-white px-4 py-3 text-sm font-medium text-pink-900 shadow-sm shadow-pink-100">
+                  <li key={feature} className="flex items-center gap-3 rounded-2xl border border-pink-200 bg-surface px-4 py-3 text-sm font-medium text-pink-900 shadow-sm shadow-pink-100">
                     <CircleCheck className="h-4 w-4 shrink-0 text-pink-500" aria-hidden="true" />
                     {feature}
                   </li>
@@ -266,7 +266,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.technologies && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Tools" title="Technology Stack" />
               <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
@@ -319,7 +319,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.userExperience && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="User experience" title={caseStudy.userExperience.heading} />
               <div className="grid gap-10 lg:grid-cols-2">
@@ -360,7 +360,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
                 </div>
                 <ol className="relative grid gap-4 before:absolute before:bottom-5 before:left-[1.15rem] before:top-5 before:w-px before:bg-pink-200">
                   {caseStudy.checkoutWorkflow.steps.map((step) => (
-                    <li key={step.number} className="relative flex items-center gap-4 rounded-2xl border border-pink-200 bg-white p-4">
+                    <li key={step.number} className="relative flex items-center gap-4 rounded-2xl border border-pink-200 bg-surface p-4">
                       <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-500 font-mono text-xs font-bold text-white">
                         {step.number}
                       </span>
@@ -374,7 +374,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.sqlCapabilities && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="SQL implementation" title={caseStudy.sqlCapabilities.heading} />
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -453,12 +453,12 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.galleryImages && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Visuals" title={caseStudy.slug === "embedded-systems" ? "Lab Gallery" : "Project Gallery"} />
               <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {caseStudy.galleryImages.map((image) => (
-                  <figure key={image.src} className="overflow-hidden rounded-3xl border border-pink-200 bg-white shadow-sm shadow-pink-100">
+                  <figure key={image.src} className="overflow-hidden rounded-3xl border border-pink-200 bg-surface shadow-sm shadow-pink-100">
                     <div className="relative aspect-[4/3] overflow-hidden bg-pink-100">
                       <Image src={image.src} alt={image.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" />
                     </div>
@@ -492,7 +492,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.testing && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Testing" title={caseStudy.testing.heading} />
               <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
@@ -559,7 +559,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.process && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Development process" title={caseStudy.process.heading} />
               <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
@@ -600,7 +600,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.skillsSection && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Experience" title={caseStudy.skillsSection.heading} />
               <ul className="flex max-w-5xl flex-wrap gap-3">
@@ -608,7 +608,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
                   <li key={skill}><TechBadge label={skill} /></li>
                 ))}
               </ul>
-              <div className="mt-12 rounded-3xl border border-pink-200 bg-pink-950 p-8 text-white shadow-xl shadow-pink-200 lg:flex lg:items-center lg:justify-between lg:gap-8 lg:p-10">
+              <div className="mt-12 rounded-3xl border border-pink-200 bg-background p-8 text-white shadow-xl shadow-pink-200 lg:flex lg:items-center lg:justify-between lg:gap-8 lg:p-10">
                 <div>
                   <p className="font-mono text-xs uppercase tracking-widest text-pink-300">Project status</p>
                   <h2 className="mt-2 text-2xl font-bold lg:text-3xl">{caseStudy.status}</h2>
@@ -617,7 +617,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
                   </p>
                 </div>
                 {caseStudy.reflection && (
-                  <Link href={caseStudy.reflection.ctaHref ?? "/#projects"} className="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-pink-700 transition-colors hover:bg-pink-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:mt-0">
+                  <Link href={caseStudy.reflection.ctaHref ?? "/#projects"} className="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full bg-surface px-5 py-3 text-sm font-semibold text-pink-700 transition-colors hover:bg-pink-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:mt-0">
                     {caseStudy.reflection.ctaLabel} <ChevronRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
                 )}
@@ -627,7 +627,7 @@ export function ProjectDetail({ project, caseStudy }: ProjectDetailProps) {
         )}
 
         {caseStudy.reflection && !caseStudy.skillsSection && (
-          <section className={`bg-white ${sectionPadding}`}>
+          <section className={`bg-surface ${sectionPadding}`}>
             <div className={sectionContainer}>
               <SectionHeading label="Reflection" title={caseStudy.reflection.heading} />
               <div className="space-y-5 text-base leading-relaxed text-pink-800 lg:text-lg">

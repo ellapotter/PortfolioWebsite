@@ -38,7 +38,7 @@ export function Projects() {
         </div>
 
         <div className="mb-12 flex justify-center lg:mb-16">
-          <div className="inline-flex max-w-full flex-wrap justify-center gap-2 rounded-full border border-pink-200 bg-white p-1.5 shadow-sm shadow-pink-100 lg:gap-3 lg:p-2">
+          <div className="inline-flex max-w-full flex-wrap justify-center gap-2 rounded-full border border-pink-200 bg-surface p-1.5 shadow-sm shadow-pink-100 lg:gap-3 lg:p-2">
             {projectFilters.map((filter) => {
               const isActive = activeFilter === filter.id;
 
